@@ -1,16 +1,9 @@
 /*jshint strict:false*/
 
-describe('Feature test:', function(){
-  var plane;
+describe('Airport',function(){
   var airport;
-
-  beforeEach(function(){
-  var airport = new Airport();
-  var plane = new Plane();
+  airport = new Airport();
+  it ("has no planes by default", function(){
+    expect(airport.planes()).toEqual([]);
   });
-  it('planes can be instructed to land', function(){
-  plane.land(airport);
-  expect(airport.planes()).toContain(plane);
-});
-
 });
